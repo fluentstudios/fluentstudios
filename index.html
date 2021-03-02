@@ -6,7 +6,10 @@ layout: default
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 <style>
-
+    #state-container{
+        height: 296px;
+        overflow-y: hidden;
+    }
     button.btn.btn-default,
     .btn.btn-default{
         background-color: #93c549;
@@ -205,9 +208,9 @@ layout: default
 
 
 <script id="tableGuts" type="text/EJS">
-    <% var x= 0; %>
+  
     <% $.each(people, function(i, info){ %>
-       console.log('test2'+x);
+   
         <tr>
             <td>
                 <% if (info.person.photoUrl) { %>
@@ -382,4 +385,13 @@ layout: default
       });
     });
   //]]>
+</script>
+<script>
+    var rcount = 0;
+    $('#state-results').each(function(index, tr) { 
+       rcount++;
+        if(rcount > 2){
+            $(this).remove();
+        }
+    });
 </script>
