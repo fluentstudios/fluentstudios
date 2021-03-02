@@ -205,8 +205,9 @@ layout: default
 
 
 <script id="tableGuts" type="text/EJS">
-    <% $.each(people, function(2, info){ %>
-        <tr class='test'>
+console.log(people);
+    <% $.each(people, function(i, info){ %>
+        <tr>
             <td>
                 <% if (info.person.photoUrl) { %>
                     <img class="img-rounded headshot" src="<%= info.person.photoUrl %>" alt="<%= info.person.name %>" title="<%= info.person.name %>" />
