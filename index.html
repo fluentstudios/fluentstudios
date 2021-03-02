@@ -205,8 +205,9 @@ layout: default
 
 
 <script id="tableGuts" type="text/EJS">
-console.log(people);
+    <% var x= 0; %>
     <% $.each(people, function(i, info){ %>
+       console.log('test2'+x);
         <tr>
             <td>
                 <% if (info.person.photoUrl) { %>
