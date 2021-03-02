@@ -148,7 +148,7 @@
     <script>
       $( document ).ready(function() {
           var rcount = 0;
-        console.log('test');
+        setTimeout(function(){ 
           $('#state-results > tbody  > tr').each(function() { 
              rcount++;
               if(rcount > 2){
@@ -156,6 +156,8 @@
               }
              console.log(rcount);
           });
+        }, 3000);
+          
        });
       </script>
   </body>
