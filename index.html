@@ -218,7 +218,7 @@ layout: default
                 <span class='visible-xs-block visible-sm-block'><%= info.office.name %></span>
             </td>
             <td class='hidden-xs hidden-sm'><%= info.office.name %></td>
-            <td class='hidden-xs'>
+            <td class='hidden-xs' style="width:1px;opacity=0;display:none;">
                 <% if (info.address) { %>
                     <% $.each(info.address, function(i, addr){ %>
                         <p>
