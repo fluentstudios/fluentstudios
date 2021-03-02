@@ -105,8 +105,10 @@ function addressSearch() {
         }
         else {
             setFoundDivisions(divisions);
-
+            var countResult = 0;
             $.each(divisions, function(division_id, division){
+                countResult++;
+                console.log(countResult);
                 if (DEBUG) console.log(division.name);
                 if (typeof division.officeIndices !== 'undefined'){
                     
