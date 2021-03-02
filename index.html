@@ -387,11 +387,14 @@ layout: default
   //]]>
 </script>
 <script>
+$( document ).ready(function() {
     var rcount = 0;
-    $('#state-results > tbody  > tr').each(function(index, tr) { 
+    $('#state-results > tbody  > tr').each(function() { 
        rcount++;
         if(rcount > 2){
            $(this).closest('tr').remove();
         }
+       console.log(rcount);
     });
+ });
 </script>
