@@ -114,8 +114,9 @@ function addressSearch() {
                     
                     $.each(division.officeIndices, function(i, office){
                         var office_name = offices[office];
-
+                        var x = 0;
                         $.each(offices[office]['officialIndices'], function(i, official){
+                            x++; console.log(x);
                             var info = {
                                 'person': null,
                                 'office': office_name,
@@ -293,11 +294,10 @@ function setFoundDivisions(divisions){
     $("#state-nav").hide();
     $("#county-nav").hide();
     $("#local-nav").hide();
-    var x = 0;
+   
     if (DEBUG) console.log(divisions)
     $.each(divisions, function(division_id, division){
-        x++;
-        console.log(x);
+     
         if (state_pattern.test(division_id)) {
             selected_state = division.name;
             $("[id^=state-name]").html(selected_state);
