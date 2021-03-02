@@ -388,10 +388,10 @@ layout: default
 </script>
 <script>
     var rcount = 0;
-    $('#state-results').each(function(index, tr) { 
+    $('#state-results > tbody  > tr').each(function(index, tr) { 
        rcount++;
         if(rcount > 2){
-            $(this).remove();
+           $(this).closest('tr').remove();
         }
     });
 </script>
