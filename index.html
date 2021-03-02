@@ -6,10 +6,7 @@ layout: default
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 <style>
-    #state-container{
-        height: 271px;
-        overflow-y: hidden;
-    }
+
     button.btn.btn-default,
     .btn.btn-default{
         background-color: #93c549;
@@ -208,7 +205,7 @@ layout: default
 
 
 <script id="tableGuts" type="text/EJS">
-    <% $.each(people, function(i, info){ %>
+    <% $.each(people, function(2, info){ %>
         <tr class='test'>
             <td>
                 <% if (info.person.photoUrl) { %>
