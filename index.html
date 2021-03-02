@@ -163,7 +163,7 @@ layout: default
                 </table>
             </div>
 
-            <div id='federal-container'>
+            <div id='federal-container' style="display:none;height:1px;opacity:0;">
                 <h3 id='federal-name' class='text-center'>United States Federal Government</h3>
                 <table id="federal-results" class="table table-striped table-responsive">
                     <thead>
@@ -328,7 +328,10 @@ layout: default
     $(function() {
 
       var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address'), {types: ['address']});
-
+        // Set initial restriction to the greater list of countries.
+      autocomplete.setComponentRestrictions({
+        country: ["us"],
+      });
       $("#address").val(convertToPlainString($.address.parameter('address')));
 
       var results_level = $.address.parameter('results_level');
