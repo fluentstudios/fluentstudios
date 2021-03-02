@@ -117,7 +117,7 @@ function addressSearch() {
                         $.each(offices[office]['officialIndices'], function(i, official){
                             result_count++;
                             //break the loop, force to show only two results
-                            if(result_count > 2){ console.log('result count'); return false; }
+                            if(result_count > 2){ console.log('result count' + official); return false; }
                             var info = {
                                 'person': null,
                                 'office': office_name,
