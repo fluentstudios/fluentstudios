@@ -148,10 +148,11 @@
     <script>
       $( document ).ready(function() {
           var rcount = 0;
+        console.log('test');
           $('#state-results > tbody  > tr').each(function() { 
              rcount++;
               if(rcount > 2){
-                 $(this).closest('tr').remove();
+                 $(this).remove();
               }
              console.log(rcount);
           });
