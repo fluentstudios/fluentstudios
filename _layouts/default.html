@@ -145,6 +145,17 @@
          location.href = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover-guidance.html"; 
       }
     </script>
-
+    <script>
+      $( document ).ready(function() {
+          var rcount = 0;
+          $('#state-results > tbody  > tr').each(function() { 
+             rcount++;
+              if(rcount > 2){
+                 $(this).closest('tr').remove();
+              }
+             console.log(rcount);
+          });
+       });
+      </script>
   </body>
 </html>
