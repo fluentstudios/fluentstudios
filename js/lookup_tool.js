@@ -105,10 +105,9 @@ function addressSearch() {
         }
         else {
             setFoundDivisions(divisions);
-            var countResult = 0;
+       
             $.each(divisions, function(division_id, division){
-                countResult++;
-                console.log(division);
+              
                 if (DEBUG) console.log(division.name);
                 if (typeof division.officeIndices !== 'undefined'){
                     
@@ -116,7 +115,7 @@ function addressSearch() {
                         var office_name = offices[office];
                         var x = 0;
                         $.each(offices[office]['officialIndices'], function(i, official){
-                            x++; console.log(x);
+                            x++; console.log('test ' + x);
                             var info = {
                                 'person': null,
                                 'office': office_name,
@@ -135,7 +134,9 @@ function addressSearch() {
 
                             if (typeof person.channels !== 'undefined'){
                                 var channels = [];
+                                var ch = 0;
                                 $.each(person.channels, function(i, channel){
+                                    ch++; console.log('ch ' + ch);
                                     if (channel.type != 'GooglePlus' && channel.type != 'YouTube') {
                                         channel['icon'] = social_icon_lookup[channel.type];
                                         channel['link'] = social_link_lookup[channel.type] + channel['id'];
