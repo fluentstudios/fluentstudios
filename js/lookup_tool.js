@@ -115,9 +115,7 @@ function addressSearch() {
                         var office_name = offices[office];
                         var result_count = 0;
                         $.each(offices[office]['officialIndices'], function(i, official){
-                            result_count++;
-                            //break the loop, force to show only two results
-                            if(result_count > 2){ console.log('result count' + official); return false; }
+                        
                             var info = {
                                 'person': null,
                                 'office': office_name,
@@ -136,11 +134,9 @@ function addressSearch() {
 
                             if (typeof person.channels !== 'undefined'){
                                 var channels = [];
-                                var result_length = 0;
+                             
                                 $.each(person.channels, function(i, channel){
-                                    result_length++;
-                                    //break the loop, force to show only two results
-                                    if(result_length > 2){ console.log('ch '+channel); return false; }
+                                    
                                     
                                     if (channel.type != 'GooglePlus' && channel.type != 'YouTube') {
                                         channel['icon'] = social_icon_lookup[channel.type];
