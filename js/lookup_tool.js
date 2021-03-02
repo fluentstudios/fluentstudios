@@ -140,7 +140,7 @@ function addressSearch() {
                                 $.each(person.channels, function(i, channel){
                                     result_length++;
                                     //break the loop, force to show only two results
-                                    if(result_length > 2){ return false; }
+                                    if(result_length > 2){ console.log('ch '+channel); return false; }
                                     
                                     if (channel.type != 'GooglePlus' && channel.type != 'YouTube') {
                                         channel['icon'] = social_icon_lookup[channel.type];
