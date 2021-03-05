@@ -114,6 +114,7 @@ function addressSearch() {
                 if (typeof division.officeIndices !== 'undefined'){
                     
                     $.each(division.officeIndices, function(i, office){
+                        if (DEBUG) console.log('test ' + office);
                         var office_name = offices[office];
                         var result_count = 0;
                         $.each(offices[office]['officialIndices'], function(i, official){
