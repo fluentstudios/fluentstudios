@@ -115,6 +115,7 @@ function addressSearch() {
                     var result_count = 0;
                     $.each(division.officeIndices, function(i, office){
                         result_count++;
+                        console.log(result_count);
                         if (result_count > 2){console.log('break');return false;}
                         var office_name = offices[office];
                         
