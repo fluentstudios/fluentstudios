@@ -61,7 +61,7 @@ function addressSearch() {
     }
 
     $.address.parameter('results_level', results_level_set);
-
+    DEBUG = true;
     if (DEBUG) {
         console.log('doin search')
         console.log('local: ' + show_local)
