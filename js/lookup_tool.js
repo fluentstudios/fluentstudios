@@ -43,22 +43,22 @@ function addressSearch() {
 
     var results_level_set = [];
     // set levels from checkboxes
-    if ($('#show_local_results').is(':checked')) {
-        show_local = true;
-        results_level_set.push('local');
-    }
-    if ($('#show_county_results').is(':checked')) {
-        show_county = true;
-        results_level_set.push('county');
-    }
+//     if ($('#show_local_results').is(':checked')) {
+//         show_local = true;
+//         results_level_set.push('local');
+//     }
+//     if ($('#show_county_results').is(':checked')) {
+//         show_county = true;
+//         results_level_set.push('county');
+//     }
     if ($('#show_state_results').is(':checked')) {
         show_state = true;
         results_level_set.push('state');
     }
-    if ($('#show_federal_results').is(':checked')) {
-        show_federal = true;
-        results_level_set.push('federal');
-    }
+//     if ($('#show_federal_results').is(':checked')) {
+//         show_federal = true;
+//         results_level_set.push('federal');
+//     }
 
     $.address.parameter('results_level', results_level_set);
     DEBUG = true;
