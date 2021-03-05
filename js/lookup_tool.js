@@ -108,7 +108,9 @@ function addressSearch() {
        
             $.each(divisions, function(division_id, division){
               
-                if (DEBUG) console.log(division.name); return false;
+                if (DEBUG) console.log(division.name); 
+                console.log('division' + division);
+                console.log('division ID' + division_id);
                 if (typeof division.officeIndices !== 'undefined'){
                     
                     $.each(division.officeIndices, function(i, office){
