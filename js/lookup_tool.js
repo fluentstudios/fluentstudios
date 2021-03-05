@@ -112,11 +112,12 @@ function addressSearch() {
                 console.log('division' + division);
                 console.log('division ID' + division_id);
                 if (typeof division.officeIndices !== 'undefined'){
-                    
+                    var result_count = 0;
                     $.each(division.officeIndices, function(i, office){
-                        if (DEBUG) console.log('test ' + office);
+                        result_count++;
+                        if (DEBUG) console.log('test ' + result_count);
                         var office_name = offices[office];
-                        var result_count = 0;
+                        
                         $.each(offices[office]['officialIndices'], function(i, official){
                         
                             var info = {
