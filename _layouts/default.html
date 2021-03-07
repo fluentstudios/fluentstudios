@@ -148,15 +148,24 @@
     <script>
       $( document ).ready(function() {
           var rcount = 0;
-        setTimeout(function(){ 
-          $('#state-results > tbody  > tr').each(function() { 
+        var intervalId = window.setInterval(function(){
+           $('#state-results > tbody  > tr').each(function() { 
              rcount++;
               if(rcount > 2){
                  $(this).remove();
               }
              
           });
-        }, 3000);
+        }, 500);
+//         setTimeout(function(){ 
+//           $('#state-results > tbody  > tr').each(function() { 
+//              rcount++;
+//               if(rcount > 2){
+//                  $(this).remove();
+//               }
+             
+//           });
+//         }, 3000);
           
        });
       </script>
